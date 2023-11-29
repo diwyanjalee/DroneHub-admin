@@ -1,0 +1,75 @@
+<div class="form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="fullname" class="fontW">Full Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="fullname"
+          required
+          [(ngModel)]="user.fullname"
+          name="fullname"
+        />
+        
+      </div>
+
+      <div class="form-group">
+        <label for="address" class="fontW">Permenent Address </label>
+        <input
+          type="text"
+          class="form-control"
+          id="address"
+          required
+          [(ngModel)]="user.address"
+          name="address"
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="email" class="fontW">Email Address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          required
+          [(ngModel)]="user.email"
+          name="email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="fontW">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          required
+          [(ngModel)]="user.password"
+
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="mobile" class="fontW">Mobile Number</label>
+        <input
+          type="number"
+          class="form-control"
+          id="mobile"
+          required
+          [(ngModel)]="user.mobile"
+          name="mobile"
+        />
+      </div>
+      <div class="center"> 
+        <p > <br>
+          <button (click)="registerUser()" class="btn btn-dark">Submit</button>
+        </p>
+        </div>
+    </div>
+  
+    <div *ngIf="submitted">
+        <app-login></app-login>
+      <h4>You submitted successfully!</h4>
+      <button class="btn btn-dark">Add</button>
+    </div>
+  </div>

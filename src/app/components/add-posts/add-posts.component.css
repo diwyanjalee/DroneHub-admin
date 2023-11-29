@@ -1,0 +1,10 @@
+img {
+    justify-content: center;
+    align-items: center;
+    max-width:80%;
+    padding: 20px;
+    box-shadow: 10px;
+    display: flex;
+    
+}
+

@@ -1,0 +1,69 @@
+<div class="container">
+<div class="form">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="post.title"
+          name="title"
+        />
+    </div>
+    <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" class="form-control" [(ngModel)]="post.category">
+                    <option value="rent">Rent</option>
+                    <option value="sell">Sell</option>
+            </select>
+    </div>
+    <div class="form-group">
+            <label for="location">Locatoin</label>
+            <input
+              type="text"
+              class="form-control"
+              id="location"
+              required
+              [(ngModel)]="post.location"
+              name="location"
+            />
+    </div>
+    <div class="form-group">
+            <label for="description">Description</label>
+            <input
+              type="text"
+              class="form-control"
+              id="description"
+              required
+              [(ngModel)]="post.description"
+              name="description"
+            />
+    </div>
+    
+    <div class="form-group">
+            <label for="price">Price</label>
+            <input
+              type="text"
+              class="form-control"
+              id="price"
+              required
+              [(ngModel)]="post.price"
+              name="price"
+            />
+    </div>
+
+    <div class="form-group">
+        <label for="price">Upload your Image ...</label>
+        <input type="file" class="text-nowrap text-truncate form-control" (change)="selectFile($event)"/>
+        <img id="blah" [src]="imageSrc || 'http://placehold.it/180'" alt="your image" />
+    </div>
+
+        <div>
+        <p> <br> </p>
+         <button class="btn btn-success btn-sm" [disabled]="!selectedFiles" (click)="upload()">Upload</button> 
+        
+        <button (click)="savePost()" [disabled]="!selectedFiles" class="btn btn-dark">Save</button>
+        </div>
+</div>
+</div>

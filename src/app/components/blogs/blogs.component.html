@@ -1,0 +1,26 @@
+<div class="container">
+    <form>
+        
+        <div class="form-group">
+            <label for="location">Your Title</label>
+            <input type="text" class="form-control" id="btitle" required [(ngModel)]="blog.btitle" name="btitle"/>
+    </div>
+        
+        <div class="form-group">
+            <label for="examplefile">Add Image</label> <br>
+            <input type="file" class="form-control-file" id="examplefile" required [(ngModel)]="blog.examplefile" name="examplefile"/>
+        </div>
+
+        <div class="form-group">
+          <label for="blogtext">Your Blog Text Here...</label>
+          <textarea class="form-control" id="blogtext" rows="10" id="blogtext" required [(ngModel)]="blog.blogtext" name="blogtext"></textarea>
+        </div>
+
+        <div class="center">
+            <p> <br> </p>
+            <button (click)="saveBlog()" class="btn btn-dark">Save</button>
+            </div>
+        
+      </form>
+
+</div>
